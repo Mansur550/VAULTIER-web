@@ -1,15 +1,10 @@
 
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import "@fontsource-variable/inter";
 import "./globals.css";
+
 import AnnouncementBar from "./components/layout/announcement-bar";
-
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  display: "swap",
-});
+import Navbar from "./components/layout/navbar";
 
 export const metadata: Metadata = {
   title: "Vaultier | Modern Fashion",
@@ -21,9 +16,9 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className="h-full antialiased">
-      <body className={`${inter.className} flex min-h-full flex-col`}>
+      <body className="flex min-h-full flex-col font-sans">
         <AnnouncementBar />
-       
+        <Navbar />
         {children}
       </body>
     </html>

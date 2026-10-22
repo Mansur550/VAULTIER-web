@@ -24,8 +24,10 @@ export default function Navbar() {
   return (
     <header className="relative z-50 border-b border-neutral-200 bg-white">
       <div className="mx-auto flex h-[72px] max-w-[1440px] items-center justify-between px-5 sm:px-8 lg:px-12">
+
+
         {/* Mobile menu button */}
-        <div className="flex flex-1 items-center lg:hidden">
+        <div className="flex flex-1 items-center md:hidden ">
           <button
             type="button"
             onClick={() => setMenuOpen(!menuOpen)}
@@ -33,34 +35,38 @@ export default function Navbar() {
             aria-expanded={menuOpen}
             aria-controls="mobile-navigation"
             className="inline-flex size-10 items-center justify-center rounded-full transition-colors hover:bg-neutral-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+
           >
             {menuOpen ? (
               <X size={21} strokeWidth={1.6} />
             ) : (
               <Menu size={21} strokeWidth={1.6} />
             )}
+
           </button>
         </div>
 
-        {/* Brand */}
+        {/* Home */}
         <Link
           href="/"
           aria-label="Vaultier home"
-          className="shrink-0 text-2xl font-semibold tracking-[-0.06em] text-black sm:text-[28px]"
+          className="shrink-0 text-2xl font-bold tracking-[-0.06em] text-black sm:text-[28px]"
         >
-          VAULTIER
+          VAULTIER.
         </Link>
 
         {/* Desktop navigation */}
         <nav
           aria-label="Main navigation"
-          className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 lg:flex xl:gap-10"
+          className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 md:flex xl:gap-10"
         >
           {navigation.map((item) => (
             <Link
               key={item.label}
               href={item.href}
-              className="whitespace-nowrap text-[13px] font-medium text-neutral-700 transition-colors hover:text-black"
+
+              className="group relative whitespace-nowrap text-[15px] font-medium font-semibold text-neutral-800 transition-colors duration-200 hover:font-semibold hover:text-black after:absolute after:-bottom-1 after:left-0 after:h-[1.5px] after:w-0 after:bg-black after:transition-all after:duration-200 hover:after:w-full"
+
             >
               {item.label}
             </Link>
@@ -92,6 +98,7 @@ export default function Navbar() {
           >
             <ShoppingBag size={20} strokeWidth={1.6} />
           </Link>
+
         </div>
       </div>
 
