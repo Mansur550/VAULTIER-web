@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import FeaturedProducts from "./components/home/FeaturedProducts";
 
 export default function Home() {
   return (
@@ -52,6 +53,7 @@ export default function Home() {
           Our range is crafted sustainably with longevity in mind.
         </p>
       </section>
+      <FeaturedProducts/>
     </main>
   );
 }
