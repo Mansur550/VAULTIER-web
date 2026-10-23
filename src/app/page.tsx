@@ -15,7 +15,7 @@ export default function Home() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[58%_center] md:object-center"
+          className="object-cover object-[40%_center] md:object-center"
         />
 
         {/* Subtle overlay for readable text, without washing out the image */}
@@ -28,12 +28,11 @@ export default function Home() {
           <div className="max-w-[430px]">
             <h1
               id="hero-title"
-              className="text-3xl leading-tight font-medium tracking-tight sm:text-4xl md:text-[42px]"
+              className="text-2xl leading-tight font-medium tracking-tight sm:text-4xl md:text-[42px]"
             >
-              Elevate Your Style
+              Elegance In Simplicity,
               <br />
-              Timeless Fashion,
-              <br className="md:hidden" /> Sustainable Choices
+              Earth's Harmony
             </h1>
 
             <Link
